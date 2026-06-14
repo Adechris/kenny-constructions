@@ -2,7 +2,7 @@ let serverHandler;
 
 async function getServerHandler() {
   if (!serverHandler) {
-    serverHandler = (await import("../../dist/server/index")).default || (await import("../../dist/server/index")).handler;
+    serverHandler = (await import("../../dist/server/server")).default;
   }
   return serverHandler;
 }
